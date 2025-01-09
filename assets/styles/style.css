@@ -10,5 +10,66 @@ nav {
 
 h2 {
     margin: 0 auto;
-    
+    width: 55%;
+    color: white;
+    padding: 10px 0;
 }
+
+.ctn {
+    width: 55%;
+}
+
+.ligne {
+    padding: 50px 0;
+}
+
+.ligne .col-9 img {
+    width: 100%;
+}
+
+#banniere {
+    background: url("../images/background.jpg") 20% 90%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+
+main {
+    background-color: beige;
+    height: 60vh;
+}
+
+textarea {
+    width: 185px;
+    height: 190px;
+}
+
+#submit {
+    margin: 0 auto;
+    width: 90%;
+    background-color: #198754;
+}
+
+/* footer */
+
+footer {
+    background-color: blanchedalmond;
+}
+
+.iconechat img {
+    width: 100%;
+}
+
+.lignefooter {
+    margin: 0 auto;
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
