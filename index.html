@@ -81,7 +81,66 @@
                         </div>
 
                     </form>
-
+<!-- chat gpt -->
+                    <form class="d-flex flex-column" id="adoptionForm">
+                        <!-- Sélection du chat -->
+                        <div>
+                            <label for="chatSelect">Choix du chat :</label>
+                            <select id="chatSelect" name="chat">
+                                <option value="">-- Sélectionnez un chaton --</option>
+                                <option value="chaton1">Chaton 1</option>
+                                <option value="chaton2">Chaton 2</option>
+                                <option value="chaton3">Chaton 3</option>
+                            </select>
+                        </div>
+                    
+                        <!-- Raison d'adoption -->
+                        <div>
+                            <label for="raison">Raison d'adoption :</label>
+                            <textarea name="raison" id="raison" placeholder="Saisissez ici les raisons pour lesquelles vous souhaitez adopter ce chat..."></textarea>
+                        </div>
+                    
+                        <!-- Bouton submit -->
+                        <div class="mt-1">
+                            <button class="btn btn-primary" type="submit" id="submit">Envoyer</button>
+                        </div>
+                    </form>
+                    
+                    <script>
+                        // Validation du formulaire
+                        document.getElementById("adoptionForm").addEventListener("submit", function (event) {
+                            // Récupération des éléments
+                            const chatSelect = document.getElementById("chatSelect");
+                            const raison = document.getElementById("raison");
+                            let isValid = true;
+                    
+                            // Réinitialiser les styles
+                            chatSelect.style.border = "";
+                            raison.style.border = "";
+                    
+                            // Validation du champ select
+                            if (chatSelect.value === "") {
+                                chatSelect.style.border = "2px solid red";
+                                isValid = false;
+                            } else {
+                                chatSelect.style.border = "2px solid green";
+                            }
+                    
+                            // Validation du champ textarea
+                            if (raison.value.trim().length < 10) {
+                                raison.style.border = "2px solid red";
+                                isValid = false;
+                            } else {
+                                raison.style.border = "2px solid green";
+                            }
+                    
+                            // Empêcher l'envoi du formulaire si non valide
+                            if (!isValid) {
+                                event.preventDefault();
+                            }
+                        });
+                    </script>
+<!-- chat gpt -->
                 </div>
                 <div class="col-9">
                     <img src="./assets/images/chat_1.jpg" alt="chat1">
